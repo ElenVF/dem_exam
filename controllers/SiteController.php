@@ -141,7 +141,7 @@ class SiteController extends Controller
             }
             if($model->save()){
             if(Yii::$app->user->login($model)){
-                
+                Yii::$app->session->setFlash('success','вы успешно зарегистрированы');
                     return $this->goHome();
             }
         

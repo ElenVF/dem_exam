@@ -11,7 +11,7 @@ use yii\widgets\ListView;
 /** @var app\models\ApplicationSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Applications';
+$this->title = 'Заявки';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="application-index">
@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-    <?= Html::a('категории', ['/admin/category'], ['class' => 'btn btn-outline-warning']) ?>
+    <?= Html::a('Категории', ['/admin/category'], ['class' => 'btn btn-outline-warning']) ?>
     <?= Html::a('Отделы', ['/admin/dept'], ['class' => 'btn btn-outline-info']) ?>
     </p>
 

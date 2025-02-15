@@ -5,6 +5,7 @@ namespace app\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Application;
+use Yii;
 
 /**
  * ApplicationSearch represents the model behind the search form of `app\models\Application`.
@@ -39,9 +40,13 @@ class ApplicationSearch extends Application
      * @return ActiveDataProvider
      */
     public function search($params)
+    
     {
+        if( !Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin){
         $query = Application::find();
-
+    }
+        
+    else $query = Application::find()->where(['user_id'=>Yii::$app->user->id])->andWhere(['status_id'=>1]);
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([

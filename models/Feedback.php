@@ -46,10 +46,10 @@ class Feedback extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'description' => 'Description',
-            'phone' => 'Phone',
-            'url' => 'Url',
+            'name' => 'Ваше имя',
+            'description' => 'Отзыв',
+            'phone' => 'Номер телефона',
+            'imageFile' => 'Изображение',
         ];
     }
 

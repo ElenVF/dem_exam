@@ -1,6 +1,10 @@
 .feedback-form{
    
-     background-image: url("/web/img.png");
+     background-color: rgba(0, 0, 0, 0.311);
      background-repeat: no-repeat;
      background-size: cover;
+}
+.carousel slide{
+     max-width: 200rem;;
+
 }

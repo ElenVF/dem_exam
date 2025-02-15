@@ -106,6 +106,46 @@ class DefaultController extends Controller
         ]);
     }
 
+
+    public function actionLoad($id)
+    {
+        $model = $this->findModel($id);
+if($model->status_id!=1)return $this->goHome();
+        if ($this->request->isPost)  {
+            $model->status_id=2;
+            if($model->save()){
+                Yii::$app->session->setFlash('success','вы успешно изменили статус');
+            return $this->redirect(['view', 'id' => $model->id]);
+        }
+    }
+   
+       
+    }
+    public function actionConfirm($id)
+    {
+        $model = $this->findModel($id);
+if($model->status_id!=2)return $this->goHome();
+        if ($this->request->isPost)  {
+            $model->status_id=3;
+            if($model->save()){
+                Yii::$app->session->setFlash('success','вы успешно изменили статус');
+            return $this->redirect(['view','id' => $model->id]);
+        }
+    }
+}
+public function actionReject($id)
+{
+    $model = $this->findModel($id);
+if($model->status_id!=2)return $this->goHome();
+    if ($this->request->isPost)  {
+        $model->status_id=4;
+        if($model->save()){
+            Yii::$app->session->setFlash('success','вы успешно изменили статус');
+        return $this->redirect(['view', 'id' => $model->id]);
+    }
+}
+}
+
     /**
      * Deletes an existing Application model.
      * If deletion is successful, the browser will be redirected to the 'index' page.

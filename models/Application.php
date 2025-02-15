@@ -53,12 +53,12 @@ class Application extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'description' => 'Description',
-            'created_at' => 'Created At',
-            'date_str' => 'Date Str',
-            'status_id' => 'Status ID',
-            'user_id' => 'User ID',
-            'dept_id' => 'Dept ID',
+            'description' => 'Описание',
+            'created_at' => 'Дата создания',
+            'date_str' => 'Дата окончания',
+            'status_id' => 'Статус',
+            'user_id' => 'Пользователь',
+            'dept_id' => 'Отдел',
         ];
     }
 

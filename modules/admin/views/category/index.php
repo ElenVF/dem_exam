@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\CategorySearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Categories';
+$this->title = 'Категории';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="category-index">
@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Создать категорию', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <p>
-    <?= Html::a('заявки', ['/admin'], ['class' => 'btn btn-outline-warning']) ?>
+    <?= Html::a('Заявки', ['/admin'], ['class' => 'btn btn-outline-warning']) ?>
   
     <?= Html::a('Отделы', ['/admin/dept'], ['class' => 'btn btn-outline-info']) ?>
     </p>
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+   
             'name',
             [
                 'class' => ActionColumn::className(),

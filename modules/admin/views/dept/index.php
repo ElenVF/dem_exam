@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Создать отдел', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('с', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <p>
     <?= Html::a('заявки', ['/admin'], ['class' => 'btn btn-outline-warning']) ?>
@@ -33,7 +33,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'name',
             [
                 'class' => ActionColumn::className(),
